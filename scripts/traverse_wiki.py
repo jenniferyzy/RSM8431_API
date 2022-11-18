@@ -11,13 +11,13 @@ def bft(root):
   seen = set()
   q = [root]
 
-  while q:
+  while q: #this is for selecting the outbound link in the WikiPedia 
     n = q.pop(0)
     if n not in seen:
       print(n)
       seen.add(n)
       q += get_links(n)
-    time.sleep(1)
+    time.sleep(1) #slow down the traffice in Wiki Pedia 
 
 def get_links(url):
   html = requests.get(url).content
